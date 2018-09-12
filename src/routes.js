@@ -10,7 +10,7 @@ import IndexPage from './pages';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/contact" component={ContactPage} />
           <Route exact path="/about" component={AboutPage} />
