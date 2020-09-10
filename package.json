@@ -22,5 +22,17 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "scrollreveal": "^4.0.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
