@@ -14,14 +14,16 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "gh-pages": "^3.1.0",
     "node-sass-chokidar": "^1.5.0",
-    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "scrollreveal": "^4.0.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "npm-run-all": "^4.1.5"
   },
   "browserslist": {
     "production": [
