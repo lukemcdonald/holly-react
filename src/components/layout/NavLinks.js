@@ -2,26 +2,23 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
 
-export default (props) => {
-  const links = [
-    { text: "Contact", href: "/contact" },
-    { text: "About Us", href: "/about" },
-    { text: "FAQ's", href: "/faqs" },
-    { text: "Support", href: "/support" },
-  ];
+export default function NavLinks({ className }) {
+	const links = [
+		{ text: 'Contact', href: '/contact' },
+		{ text: 'About Us', href: '/about' },
+		{ text: "FAQ's", href: '/faqs' },
+		{ text: 'Support', href: '/support' },
+	];
 
-  const classNames = classnames(
-    'list-reset',
-    props.className
-  )
-
-  return (
-    <ul className={classNames}>
-      {links.map((link, index) => (
-        <li key={index}>
-          <NavLink to={link.href} activeClassName="is-active">{link.text}</NavLink>
-        </li>
-      ))}
-    </ul>
-  )
+	return (
+		<ul className={classnames('list-reset', className)}>
+			{links.map(({ text, href }) => (
+				<li key={text}>
+					<NavLink to={href} activeClassName="is-active">
+						{text}
+					</NavLink>
+				</li>
+			))}
+		</ul>
+	);
 }
