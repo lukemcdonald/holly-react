@@ -23,7 +23,7 @@ export function setupHeaderBg() {
 
 export function setupScrollReveal() {
 	if (document.body.classList.contains('has-animations')) {
-		const sr = window.sr === ScrollReveal();
+		const { sr = ScrollReveal() } = window;
 
 		sr.reveal('.hero-title, .hero-paragraph, .hero-form', {
 			duration: 1000,
