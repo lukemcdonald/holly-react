@@ -1,26 +1,23 @@
-import React from 'react';
-import Layout from '../layouts/index';
+import React from 'react'
+import Layout from '../layouts/index'
+import {
+	Article,
+	ArticleContent,
+	ArticleMedia,
+} from '../components/layout/Article'
 
 export default function SupportPage() {
 	return (
 		<Layout>
-			<article className="entry">
-				<div className="container">
-					<div className="entry-inner">
-						<div className="entry-content">
-							<div className="container-sm">
-								<header className="entry-header">
-									<h1 className="entry-title">Support</h1>
-								</header>
+			<Article>
+				<ArticleContent title="Support">
+					<p>Add your support content here.</p>
+				</ArticleContent>
 
-								<div className="entry-body">
-									<p>Add your support information here.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
+				<ArticleMedia>
+					<img src="https://picsum.photos/420/640" alt="Lorem Picsum" />
+				</ArticleMedia>
+			</Article>
 		</Layout>
-	);
+	)
 }

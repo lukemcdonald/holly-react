@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
 export default function HeroIllustration() {
 	return (
 		<>
-			<div className="hero-squares hero-squares-1 is-revealing">
+			<div
+				className="absolute is-revealing"
+				style={{ top: '-88px', left: '92px' }}
+			>
 				<svg
 					width="124"
 					height="64"
@@ -29,7 +32,10 @@ export default function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-			<div className="hero-squares hero-squares-2 is-revealing">
+			<div
+				className="absolute is-revealing"
+				style={{ top: '474px', left: '165px' }}
+			>
 				<svg
 					width="64"
 					height="88"
@@ -56,7 +62,10 @@ export default function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-			<div className="hero-ball hero-ball-1 is-revealing">
+			<div
+				className="absolute hero-ball hero-ball-1 is-revealing"
+				style={{ top: '-190px', left: '417px' }}
+			>
 				<svg
 					width="400"
 					height="400"
@@ -119,7 +128,10 @@ export default function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-			<div className="hero-ball hero-ball-2 is-revealing">
+			<div
+				className="absolute hero-ball hero-ball-2 is-revealing"
+				style={{ top: '335px', left: '-64px' }}
+			>
 				<svg
 					width="200"
 					height="200"
@@ -439,7 +451,10 @@ export default function HeroIllustration() {
 					</g>
 				</svg>
 			</div>
-			<div className="hero-ball hero-ball-3 is-revealing">
+			<div
+				className="absolute hero-ball hero-ball-3 is-revealing"
+				style={{ top: '402px', left: '440px' }}
+			>
 				<svg
 					width="80"
 					height="80"
@@ -502,7 +517,10 @@ export default function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-			<div className="hero-ball hero-ball-4 is-revealing">
+			<div
+				className="absolute hero-ball hero-ball-4 is-revealing"
+				style={{ top: '-75px', left: '290px' }}
+			>
 				<svg
 					width="40"
 					height="40"
@@ -565,7 +583,10 @@ export default function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-			<div className="hero-ball hero-ball-5 is-revealing">
+			<div
+				className="absolute hero-ball hero-ball-5 is-revealing"
+				style={{ top: '500px' }}
+			>
 				<svg
 					width="24"
 					height="24"
@@ -629,5 +650,5 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 		</>
-	);
+	)
 }

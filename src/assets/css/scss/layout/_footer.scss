@@ -29,7 +29,6 @@
     justify-content: center;
 }
 
-.footer-brand,
 .footer-links,
 .footer-social-links {
     margin-bottom: 24px;
@@ -58,50 +57,11 @@
 }
 
 .footer-links {
-
     a {
         color: color(typography, 1i);
 
         &:hover {
             color: color(typography, 1i);
         }
-    }
-}
-
-@include media( '>medium' ) {
-
-    .site-footer-inner {
-        justify-content: space-between;
-    }
-
-    .footer-social-links {
-        flex: 100%;
-    }
-
-    .footer-links,
-    .footer-copyright {
-        flex: 50%;
-    }
-
-    .footer-brand,
-    .footer-copyright {
-        justify-content: flex-start;
-    }
-
-    .footer-links,
-    .footer-social-links {
-        justify-content: flex-end;
-    }
-
-    .footer-links {
-        order: 1;
-        margin-bottom: 0;
-    }
-}
-
-@include media( '<=large' ) {
-
-    .footer-copyright {
-        color: color(typography, 1i);
     }
 }

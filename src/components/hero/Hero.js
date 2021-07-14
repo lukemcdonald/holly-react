@@ -1,39 +1,47 @@
-import React, { Component } from 'react';
-import { setupScrollReveal } from '../../assets/js/main.js';
+import React, { Component } from 'react'
+import { setupScrollReveal } from '../../assets/js/main.js'
 
-import NewsletterForm from '../forms/NewsletterForm';
+import NewsletterForm from '../forms/NewsletterForm'
 
 class Hero extends Component {
 	componentDidMount() {
-		setupScrollReveal();
+		setupScrollReveal()
 	}
 
 	render() {
-		const { title, content, illustration: Illustration } = this.props;
+		const { title, content, illustration: Illustration } = this.props
 
 		return (
-			<section className="hero">
-				<div className="container">
-					<div className="hero-inner">
-						<div className="hero-copy">
-							<div className="container-sm">
-								<h1 className="hero-title h2-mobile mt-0 is-revealing">
+			<section className="text-center lg:w-full lg:text-left lg:py-20">
+				<div className="w-full max-w-6xl px-6 mx-auto hero">
+					<div className="relative hero-inner lg:flex">
+						<div
+							className="pt-10 pb-16 hero-copy lg:pt-16 lg:pr-20"
+							style={{ minWidth: '600px' }}
+						>
+							<div className="w-full max-w-3xl mx-auto">
+								<h1 className="mt-0 mb-4 text-4xl font-bold hero-title is-revealing md:text-5xl ">
 									{title}
 								</h1>
-								<p className="hero-paragraph is-revealing">{content}</p>
+								<p className="px-16 prose prose-xl hero-paragraph is-revealing md:px-0">
+									{content}
+								</p>
 							</div>
 
-							<NewsletterForm className="hero-form" submit="Get early access" />
+							<NewsletterForm
+								className="max-w-md m-0 mt-8 hero-form md:flex"
+								submit="Get early access"
+							/>
 						</div>
 
-						<div className="hero-illustration">
+						<div className="relative py-10 hero-illustration right-10 md:right-20 lg:right-0 lg:p-0">
 							<Illustration />
 						</div>
 					</div>
 				</div>
 			</section>
-		);
+		)
 	}
 }
 
-export default Hero;
+export default Hero

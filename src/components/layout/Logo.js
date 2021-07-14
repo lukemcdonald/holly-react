@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function Logo() {
 	return (
@@ -40,5 +40,5 @@ export default function Logo() {
 				/>
 			</g>
 		</svg>
-	);
+	)
 }

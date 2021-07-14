@@ -1,26 +1,23 @@
-import React from 'react';
-import Layout from '../layouts/index';
+import React from 'react'
+import Layout from '../layouts/index'
+import {
+	Article,
+	ArticleContent,
+	ArticleMedia,
+} from '../components/layout/Article'
 
 export default function ContactPage() {
 	return (
 		<Layout>
-			<article className="entry">
-				<div className="container">
-					<div className="entry-inner">
-						<div className="entry-content">
-							<div className="container-sm">
-								<header className="entry-header">
-									<h1 className="entry-title">Contact</h1>
-								</header>
+			<Article>
+				<ArticleContent title="Contact">
+					<p>Add your contact information here.</p>
+				</ArticleContent>
 
-								<div className="entry-body">
-									<p>Add your contact information here.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
+				<ArticleMedia>
+					<img src="https://picsum.photos/420/640" alt="Lorem Picsum" />
+				</ArticleMedia>
+			</Article>
 		</Layout>
-	);
+	)
 }

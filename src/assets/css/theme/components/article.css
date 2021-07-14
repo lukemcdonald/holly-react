@@ -1,0 +1,60 @@
+
+/*--------------------------------------------------------------
+# Entry
+--------------------------------------------------------------*/
+@layer components {
+  .article--media {
+    &::before {
+      content: '';
+      @apply absolute right-0 top-0 bg-primary-400 bg-gradient-to-r from-primary-300 to-primary-500;
+      left: -150px;
+      bottom: -300px;
+      /* background: #8179f2;
+      background: linear-gradient(to bottom, #665DF0 0, #9B95F3 100%); */
+    }
+
+    img,
+    svg,
+    iframe {
+      @apply visible max-w-none ml-auto relative;
+    }
+  }
+
+  @screen md {
+    .article--media {
+      @apply -right-20;
+
+      img,
+      svg,
+      iframe {
+        max-width: 640px;
+      }
+    }
+  }
+
+  @screen lg {
+    .article {
+      &::before {
+        @apply h-screen w-full -top-20;
+        left: 620px;
+      }
+    }
+
+    .article--content {
+      min-width: 600px;
+      max-width: 62%;
+    }
+
+    .article--media {
+      &::before {
+        content: normal;
+      }
+
+      img,
+      svg,
+      iframe {
+        @apply max-w-3xl
+      }
+    }
+  }
+}

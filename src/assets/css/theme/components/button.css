@@ -1,0 +1,5 @@
+@layer components {
+  button {
+    @apply inline-flex leading-4 no-underline border-0 rounded-sm font-bold cursor-pointer justify-center py-4 px-7 text-center whitespace-nowrap;
+  }
+}

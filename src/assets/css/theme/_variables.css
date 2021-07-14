@@ -1,0 +1,27 @@
+/* Theme CSS Variables
+------------------------------------------------------------------------------*/
+
+:root {
+  --color-KEY-50: #f9fafb;
+}
+
+/*
+typography: (
+  1: #30323D,#1E293B
+  2: #768696,#64748B
+  3: #9BACBD,#94A3B8
+  1i: #FFF,
+  2i: rgba( #FFF, .8 )
+),
+bg: (
+  1: #FFFFFF,
+  2: #F5F9FC,
+  3: #DDE7EF
+),
+
+additional: (
+  1: #FF5E5B,
+  2: #F8778D,
+  3: #6EFACC
+)
+*/
