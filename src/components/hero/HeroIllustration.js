@@ -1,9 +1,43 @@
-import React, { Fragment } from 'react'
+import React, { useRef, useEffect } from 'react'
+import ScrollReveal from 'scrollreveal'
 
-export default function HeroIllustration() {
+function HeroIllustration() {
+	const scrollRevealOneRef = useRef([])
+	const scrollRevealTwoRef = useRef([])
+
+	useEffect(() => {
+		if (scrollRevealOneRef.current) {
+			scrollRevealOneRef.current.map((ref, index) =>
+				ScrollReveal().reveal(scrollRevealOneRef.current[index], {
+					delay: 1000,
+					duration: 1400,
+					distance: '40px',
+					easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+					origin: 'bottom',
+					interval: 200,
+				})
+			)
+		}
+		if (scrollRevealTwoRef.current) {
+			scrollRevealTwoRef.current.map((ref, index) =>
+				ScrollReveal().reveal(scrollRevealTwoRef.current[index], {
+					delay: 400,
+					duration: 600,
+					distance: '40px',
+					easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+					origin: 'right',
+					interval: 150,
+				})
+			)
+		}
+
+		return () => ScrollReveal().destroy()
+	}, [])
+
 	return (
 		<>
 			<div
+				ref={(el) => (scrollRevealTwoRef.current[0] = el)}
 				className="absolute is-revealing"
 				style={{ top: '-88px', left: '92px' }}
 			>
@@ -33,6 +67,7 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 			<div
+				ref={(el) => (scrollRevealTwoRef.current[1] = el)}
 				className="absolute is-revealing"
 				style={{ top: '474px', left: '165px' }}
 			>
@@ -63,7 +98,8 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 			<div
-				className="absolute hero-ball hero-ball-1 is-revealing"
+				ref={(el) => (scrollRevealTwoRef.current[2] = el)}
+				className="absolute is-revealing"
 				style={{ top: '-190px', left: '417px' }}
 			>
 				<svg
@@ -129,6 +165,7 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 			<div
+				ref={(el) => (scrollRevealOneRef.current[0] = el)}
 				className="absolute hero-ball hero-ball-2 is-revealing"
 				style={{ top: '335px', left: '-64px' }}
 			>
@@ -194,7 +231,10 @@ export default function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-			<div className="hero-illustration-browser is-revealing">
+			<div
+				ref={(el) => (scrollRevealTwoRef.current[3] = el)}
+				className="hero-illustration-browser is-revealing"
+			>
 				<svg
 					width="800"
 					height="450"
@@ -452,6 +492,7 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 			<div
+				ref={(el) => (scrollRevealOneRef.current[1] = el)}
 				className="absolute hero-ball hero-ball-3 is-revealing"
 				style={{ top: '402px', left: '440px' }}
 			>
@@ -518,6 +559,7 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 			<div
+				ref={(el) => (scrollRevealOneRef.current[2] = el)}
 				className="absolute hero-ball hero-ball-4 is-revealing"
 				style={{ top: '-75px', left: '290px' }}
 			>
@@ -584,6 +626,7 @@ export default function HeroIllustration() {
 				</svg>
 			</div>
 			<div
+				ref={(el) => (scrollRevealOneRef.current[3] = el)}
 				className="absolute hero-ball hero-ball-5 is-revealing"
 				style={{ top: '500px' }}
 			>
@@ -652,3 +695,5 @@ export default function HeroIllustration() {
 		</>
 	)
 }
+
+export default HeroIllustration
