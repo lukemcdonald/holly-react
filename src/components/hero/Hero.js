@@ -23,23 +23,23 @@ function Hero({ title, content, illustration: Illustration }) {
 	}, [])
 
 	return (
-		<section className="text-center lg:w-full lg:text-left lg:py-20">
-			<div className="w-full max-w-6xl px-6 mx-auto hero">
-				<div className="relative hero-inner lg:flex">
+		<section className="text-center lg:w-full lg:py-20 lg:text-left">
+			<div className="hero mx-auto w-full max-w-6xl px-6">
+				<div className="hero-inner relative lg:flex">
 					<div
-						className="pt-10 pb-16 hero-copy lg:pt-16 lg:pr-20"
+						className="hero-copy pt-10 pb-16 lg:pt-16 lg:pr-20"
 						style={{ minWidth: '600px' }}
 					>
-						<div className="w-full max-w-3xl mx-auto">
+						<div className="mx-auto w-full max-w-3xl">
 							<h1
 								ref={(el) => (scrollRevealRef.current[0] = el)}
-								className="mt-0 mb-4 text-4xl font-bold is-revealing md:text-5xl "
+								className="is-revealing mt-0 mb-4 text-4xl font-bold md:text-5xl "
 							>
 								{title}
 							</h1>
 							<p
 								ref={(el) => (scrollRevealRef.current[1] = el)}
-								className="px-16 prose prose-xl is-revealing md:px-0"
+								className="is-revealing prose prose-xl px-16 md:px-0"
 							>
 								{content}
 							</p>
@@ -47,14 +47,14 @@ function Hero({ title, content, illustration: Illustration }) {
 
 						<div ref={(el) => (scrollRevealRef.current[2] = el)}>
 							<NewsletterForm
-								className="max-w-md m-0 mt-8 md:flex"
+								className="m-0 mt-8 max-w-md md:flex"
 								submitBtn="Get early access"
 								onSubmit={(values) => console.log('Email submitted', values)}
 							/>
 						</div>
 					</div>
 
-					<div className="relative py-10 right-10 md:right-20 lg:right-0 lg:p-0">
+					<div className="relative right-10 py-10 md:right-20 lg:right-0 lg:p-0">
 						<Illustration />
 					</div>
 				</div>

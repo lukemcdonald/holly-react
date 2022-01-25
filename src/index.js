@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import './assets/css/style.css'
+import './assets/style.css'
 
 import Routes from './routes'
 import registerServiceWorker from './registerServiceWorker'

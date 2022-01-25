@@ -4,9 +4,7 @@ const twForms = require('@tailwindcss/forms')
 const twTypography = require('@tailwindcss/typography')
 
 module.exports = {
-	purge: {
-		content: ['./src/**/*.js', './src/**/*.css'],
-	},
+	content: ['./src/**/*.{html,js}'],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -36,7 +34,7 @@ module.exports = {
 			current: 'currentColor',
 			black: '#000',
 			white: '#fff',
-			gray: colors.blueGray,
+			gray: colors.slate,
 			primary: colors.indigo,
 			secondary: colors.rose,
 			tertiary: colors.teal,

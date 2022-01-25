@@ -1,16 +1,14 @@
-/* @import 'theme/_variables.css'; */
-
 /**
  * Base
  * -----------------------------------------------------------------------------
  */
-@import "tailwindcss/base";
+@import 'tailwindcss/base';
 
 /**
  * Components
  * -----------------------------------------------------------------------------
  */
-@import "tailwindcss/components";
+@import 'tailwindcss/components';
 @import 'theme/components/article.css';
 @import 'theme/components/button.css';
 
@@ -18,4 +16,4 @@
  * Utilites
  * -----------------------------------------------------------------------------
  */
-@import "tailwindcss/utilities";
+@import 'tailwindcss/utilities';

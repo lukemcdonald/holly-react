@@ -38,7 +38,7 @@ function HeroIllustration() {
 		<>
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[0] = el)}
-				className="absolute is-revealing"
+				className="is-revealing absolute"
 				style={{ top: '-88px', left: '92px' }}
 			>
 				<svg
@@ -68,7 +68,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[1] = el)}
-				className="absolute is-revealing"
+				className="is-revealing absolute"
 				style={{ top: '474px', left: '165px' }}
 			>
 				<svg
@@ -99,7 +99,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[2] = el)}
-				className="absolute is-revealing"
+				className="is-revealing absolute"
 				style={{ top: '-190px', left: '417px' }}
 			>
 				<svg
@@ -166,7 +166,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[0] = el)}
-				className="absolute hero-ball hero-ball-2 is-revealing"
+				className="hero-ball hero-ball-2 is-revealing absolute"
 				style={{ top: '335px', left: '-64px' }}
 			>
 				<svg
@@ -493,7 +493,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[1] = el)}
-				className="absolute hero-ball hero-ball-3 is-revealing"
+				className="hero-ball hero-ball-3 is-revealing absolute"
 				style={{ top: '402px', left: '440px' }}
 			>
 				<svg
@@ -560,7 +560,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[2] = el)}
-				className="absolute hero-ball hero-ball-4 is-revealing"
+				className="hero-ball hero-ball-4 is-revealing absolute"
 				style={{ top: '-75px', left: '290px' }}
 			>
 				<svg
@@ -627,7 +627,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[3] = el)}
-				className="absolute hero-ball hero-ball-5 is-revealing"
+				className="hero-ball hero-ball-5 is-revealing absolute"
 				style={{ top: '500px' }}
 			>
 				<svg
