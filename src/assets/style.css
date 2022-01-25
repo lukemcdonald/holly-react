@@ -1225,6 +1225,9 @@ button {
 .border {
   border-width: 1px;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
@@ -1329,6 +1332,10 @@ button {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
 .no-underline {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -1354,6 +1361,9 @@ button {
 .filter {
   -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.hover\:border-b:hover {
+  border-bottom-width: 1px;
 }
 @media (min-width: 768px) {
   .md\:right-20 {

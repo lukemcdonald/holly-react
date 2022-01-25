@@ -2,18 +2,23 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const NAV_LINKS = [
-	{ text: 'Contact', href: '/contact' },
-	{ text: 'About Us', href: '/about' },
-	{ text: "FAQ's", href: '/faqs' },
-	{ text: 'Support', href: '/support' },
+	{ name: 'Contact', to: 'contact' },
+	{ name: 'About Us', to: 'about' },
+	{ name: "FAQ's", to: 'faqs' },
+	{ name: 'Support', to: 'support' },
 ]
 export default function NavLinks({ className }) {
 	return (
 		<ul className={className}>
-			{NAV_LINKS.map(({ text, href }) => (
-				<li key={text} className="ml-4">
-					<NavLink to={href} activeClassName="is-active" className="text-white">
-						{text}
+			{NAV_LINKS.map((link) => (
+				<li key={link.name} className="ml-4">
+					<NavLink
+						to={link.to}
+						className={({ isActive }) =>
+							isActive ? 'border-b text-white' : 'text-white hover:border-b'
+						}
+					>
+						{link.name}
 					</NavLink>
 				</li>
 			))}

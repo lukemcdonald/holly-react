@@ -32,7 +32,7 @@
     "postcss-import": "^14.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.2.1",
     "scrollreveal": "^4.0.9",
     "tailwindcss": "^3.0.16"
   },
@@ -52,7 +52,7 @@
     "gh-pages": "^3.2.3",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.4",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.0",
     "watch": "^1.0.2"
   },
   "browserslist": [
