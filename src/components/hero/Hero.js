@@ -48,7 +48,8 @@ function Hero({ title, content, illustration: Illustration }) {
 						<div ref={(el) => (scrollRevealRef.current[2] = el)}>
 							<NewsletterForm
 								className="max-w-md m-0 mt-8 md:flex"
-								submit="Get early access"
+								submitBtn="Get early access"
+								onSubmit={(values) => console.log('Email submitted', values)}
 							/>
 						</div>
 					</div>

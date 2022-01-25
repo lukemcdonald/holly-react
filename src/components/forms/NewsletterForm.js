@@ -1,43 +1,48 @@
-import React, { Component } from 'react'
+import React from 'react'
 import classnames from 'classnames'
 
-class NewsletterForm extends Component {
-	constructor(props) {
-		super(props)
-		this.state = { email: '' }
+export default function NewsletterForm({ className, onSubmit, submitBtn }) {
+	const [email, setEmail] = React.useState('')
+
+	function handleSubmit(event) {
+		event.preventDefault()
+		onSubmit(email)
 	}
 
-	render() {
-		const { className, submit = 'Submit' } = this.props
-		const { email } = this.state
-
-		return (
-			<form
-				className={classnames(
-					'newsletter-form is-revealing md:flex',
-					className
-				)}
-			>
-				<div className="flex-grow flex-shrink mr-2">
-					<input
-						className="w-full px-4 py-3 text-sm text-gray-500 bg-white border border-gray-300 rounded-sm shadow-none"
-						type="email"
-						name="email"
-						placeholder="Your best email&hellip;"
-					/>
-				</div>
-
-				<div className="control">
-					<button
-						className="-mt-px text-white shadow-lg bg-secondary-400"
-						type="submit"
-					>
-						{submit}
-					</button>
-				</div>
-			</form>
-		)
+	function handleChange(event) {
+		setEmail(event.target.value)
 	}
+
+	return (
+		<form
+			onSubmit={handleSubmit}
+			className={classnames('newsletter-form is-revealing md:flex', className)}
+		>
+			<div className="flex-grow flex-shrink mr-2">
+				<label className="hidden" htmlFor="email" aria-hidden="true">
+					Email
+				</label>
+				<input
+					required
+					placeholder="Your best email&hellip;"
+					id="email"
+					name="email"
+					type="email"
+					value={email}
+					onChange={handleChange}
+					autoComplete="off"
+					className="w-full px-4 py-3 text-sm text-gray-500 bg-white border border-gray-300 rounded-sm shadow-none"
+				/>
+			</div>
+
+			<div className="control">
+				<button
+					className="-mt-px text-white shadow-lg bg-secondary-400"
+					type="submit"
+				>
+					{submitBtn || 'Submit'}
+				</button>
+			</div>
+		</form>
+	)
 }
-
-export default NewsletterForm
