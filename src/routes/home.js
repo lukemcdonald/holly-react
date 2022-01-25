@@ -1,9 +1,10 @@
 import React from 'react'
-import Layout from '../layouts/index'
-import Hero from '../components/hero/Hero'
-import HeroIllustration from '../components/hero/HeroIllustration'
 
-export default function App() {
+import { Layout } from '../components/layout'
+import { Hero } from '../components/hero'
+import { HeroIllustration } from '../components/hero-illustration'
+
+export default function HomePage() {
 	return (
 		<Layout>
 			<Hero

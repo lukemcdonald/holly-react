@@ -7,7 +7,7 @@ const NAV_LINKS = [
 	{ name: "FAQ's", to: 'faqs' },
 	{ name: 'Support', to: 'support' },
 ]
-export default function NavLinks({ className }) {
+export function NavLinks({ className }) {
 	return (
 		<ul className={className}>
 			{NAV_LINKS.map((link) => (

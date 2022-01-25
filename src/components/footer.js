@@ -1,9 +1,9 @@
 import React from 'react'
 
-import SocialLinks from './SocialLinks'
-import NavLinks from './NavLinks'
+import { NavLinks } from './nav-links'
+import { SocialLinks } from './social-links'
 
-export default function Footer() {
+export function Footer() {
 	return (
 		<footer className="text-sm leading-5 tracking-normal text-gray-400">
 			<div className="mx-auto w-full max-w-6xl px-6">

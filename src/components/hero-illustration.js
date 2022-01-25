@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import ScrollReveal from 'scrollreveal'
 
-function HeroIllustration() {
+export function HeroIllustration() {
 	const scrollRevealOneRef = useRef([])
 	const scrollRevealTwoRef = useRef([])
 
@@ -695,5 +695,3 @@ function HeroIllustration() {
 		</>
 	)
 }
-
-export default HeroIllustration

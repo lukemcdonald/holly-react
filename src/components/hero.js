@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react'
 import ScrollReveal from 'scrollreveal'
 
-import NewsletterForm from '../forms/NewsletterForm'
+import { NewsletterForm } from './newsletter-form'
 
-function Hero({ title, content, illustration: Illustration }) {
+export function Hero({ title, content, illustration: Illustration }) {
 	const scrollRevealRef = useRef([])
 
 	useEffect(() => {
@@ -62,5 +62,3 @@ function Hero({ title, content, illustration: Illustration }) {
 		</section>
 	)
 }
-
-export default Hero

@@ -1,10 +1,7 @@
 import React from 'react'
-import Layout from '../layouts/index'
-import {
-	Article,
-	ArticleContent,
-	ArticleMedia,
-} from '../components/layout/Article'
+
+import { Layout } from '../components/layout'
+import { Article, ArticleContent, ArticleMedia } from '../components/article'
 
 export default function AboutPage() {
 	return (

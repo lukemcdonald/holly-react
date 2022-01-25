@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from './Logo'
 
-function Header({ title = '' }) {
+import { Logo } from './logo'
+
+export function Header({ title = '' }) {
 	return (
 		<header className="relative py-6">
 			<div className="mx-auto w-full max-w-6xl px-6">
@@ -17,5 +18,3 @@ function Header({ title = '' }) {
 		</header>
 	)
 }
-
-export default Header

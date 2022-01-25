@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'clsx'
 
-export default function NewsletterForm({ className, onSubmit, submitBtn }) {
+export function NewsletterForm({ className, onSubmit, submitBtn }) {
 	const [email, setEmail] = React.useState('')
 
 	function handleSubmit(event) {
