@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/holly-react/static/css/main.eedc6bbf.css",
+    "main.js": "/holly-react/static/js/main.18c3b15c.js",
+    "index.html": "/holly-react/index.html",
+    "main.eedc6bbf.css.map": "/holly-react/static/css/main.eedc6bbf.css.map",
+    "main.18c3b15c.js.map": "/holly-react/static/js/main.18c3b15c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eedc6bbf.css",
+    "static/js/main.18c3b15c.js"
+  ]
+}
