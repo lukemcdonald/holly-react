@@ -10,7 +10,6 @@
  */
 @import 'tailwindcss/components';
 @import 'theme/components/article.css';
-@import 'theme/components/button.css';
 
 /**
  * Utilites

@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 import ScrollReveal from 'scrollreveal'
 
+import { BackgroundGradient } from './background-gradient'
+
 export function HeroIllustration() {
 	const scrollRevealOneRef = useRef([])
 	const scrollRevealTwoRef = useRef([])
@@ -18,6 +20,7 @@ export function HeroIllustration() {
 				})
 			)
 		}
+
 		if (scrollRevealTwoRef.current) {
 			scrollRevealTwoRef.current.map((ref, index) =>
 				ScrollReveal().reveal(scrollRevealTwoRef.current[index], {
@@ -35,11 +38,11 @@ export function HeroIllustration() {
 	}, [])
 
 	return (
-		<>
+		<div>
+			<BackgroundGradient className="absolute inset-0 lg:hidden" />
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[0] = el)}
-				className="is-revealing absolute"
-				style={{ top: '-88px', left: '92px' }}
+				className="absolute top-4 left-16 lg:-top-20 lg:left-24"
 			>
 				<svg
 					width="124"
@@ -68,8 +71,7 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[1] = el)}
-				className="is-revealing absolute"
-				style={{ top: '474px', left: '165px' }}
+				className="absolute hidden lg:-bottom-28 lg:left-40 lg:block"
 			>
 				<svg
 					width="64"
@@ -99,8 +101,7 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[2] = el)}
-				className="is-revealing absolute"
-				style={{ top: '-190px', left: '417px' }}
+				className="absolute -top-48 left-96 hidden drop-shadow-2xl lg:block"
 			>
 				<svg
 					width="400"
@@ -118,43 +119,12 @@ export function HeroIllustration() {
 							gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
 							id="ball-1-a"
 						>
-							<stop stopColor="#F8F7FF" offset="0%" />
-							<stop stopColor="#DAD8FF" offset="34.827%" />
-							<stop stopColor="#9B95F3" offset="100%" />
+							<stop stopColor="#eef2ff" offset="0%" />
+							<stop stopColor="#c7d2fe" offset="34.827%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</radialGradient>
-						<filter
-							x="-500%"
-							y="-500%"
-							width="1000%"
-							height="1000%"
-							filterUnits="objectBoundingBox"
-							id="dropshadow-ball-1"
-						>
-							<feOffset
-								dx="24"
-								dy="24"
-								in="SourceAlpha"
-								result="shadowOffsetOuter"
-							/>
-							<feGaussianBlur
-								stdDeviation="24"
-								in="shadowOffsetOuter"
-								result="shadowBlurOuter"
-							/>
-							<feColorMatrix
-								values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-								in="shadowBlurOuter"
-							/>
-						</filter>
 					</defs>
-					<circle
-						cx="200"
-						cy="200"
-						r="200"
-						fill="#FFF"
-						fillRule="evenodd"
-						filter="url(#dropshadow-ball-1)"
-					/>
+					<circle cx="200" cy="200" r="200" fill="#ffffff" fillRule="evenodd" />
 					<circle
 						cx="200"
 						cy="200"
@@ -166,8 +136,7 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[0] = el)}
-				className="hero-ball hero-ball-2 is-revealing absolute"
-				style={{ top: '335px', left: '-64px' }}
+				className="hero-ball hero-ball-2 absolute left-16 top-72 drop-shadow-2xl lg:top-80 lg:-left-16"
 			>
 				<svg
 					width="200"
@@ -185,43 +154,12 @@ export function HeroIllustration() {
 							gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
 							id="ball-2-a"
 						>
-							<stop stopColor="#F8F7FF" offset="0%" />
-							<stop stopColor="#DAD8FF" offset="34.827%" />
-							<stop stopColor="#9B95F3" offset="100%" />
+							<stop stopColor="#eef2ff" offset="0%" />
+							<stop stopColor="#c7d2fe" offset="34.827%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</radialGradient>
-						<filter
-							x="-500%"
-							y="-500%"
-							width="1000%"
-							height="1000%"
-							filterUnits="objectBoundingBox"
-							id="dropshadow-ball-2"
-						>
-							<feOffset
-								dx="24"
-								dy="24"
-								in="SourceAlpha"
-								result="shadowOffsetOuter"
-							/>
-							<feGaussianBlur
-								stdDeviation="24"
-								in="shadowOffsetOuter"
-								result="shadowBlurOuter"
-							/>
-							<feColorMatrix
-								values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-								in="shadowBlurOuter"
-							/>
-						</filter>
 					</defs>
-					<circle
-						cx="100"
-						cy="100"
-						r="100"
-						fill="#FFF"
-						fillRule="evenodd"
-						filter="url(#dropshadow-ball-2)"
-					/>
+					<circle cx="100" cy="100" r="100" fill="#ffffff" fillRule="evenodd" />
 					<circle
 						cx="100"
 						cy="100"
@@ -233,9 +171,10 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealTwoRef.current[3] = el)}
-				className="hero-illustration-browser is-revealing"
+				className="hero-illustration-browser drop-shadow-2xl"
 			>
 				<svg
+					className="ml-auto max-w-screen-sm lg:max-w-none"
 					width="800"
 					height="450"
 					viewBox="0 0 800 450"
@@ -290,16 +229,16 @@ export function HeroIllustration() {
 							y2="18.374%"
 							id="browser-e"
 						>
-							<stop stopColor="#F8F7FF" offset="0%" />
-							<stop stopColor="#DAD8FF" offset="100%" />
+							<stop stopColor="#eef2ff" offset="0%" />
+							<stop stopColor="#c7d2fe" offset="100%" />
 						</linearGradient>
 						<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="browser-f">
-							<stop stopColor="#DAD8FF" offset="0%" />
-							<stop stopColor="#857DF3" offset="100%" />
+							<stop stopColor="#c7d2fe" offset="0%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</linearGradient>
 						<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="browser-g">
-							<stop stopColor="#DAD8FF" offset="0%" />
-							<stop stopColor="#CDCAFF" offset="100%" />
+							<stop stopColor="#c7d2fe" offset="0%" />
+							<stop stopColor="#a5b4fc" offset="100%" />
 						</linearGradient>
 						<linearGradient
 							x1="94.808%"
@@ -308,8 +247,8 @@ export function HeroIllustration() {
 							y2="82.567%"
 							id="browser-h"
 						>
-							<stop stopColor="#5DFBD7" stopOpacity="0" offset="0%" />
-							<stop stopColor="#5DFBD7" offset="100%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0" offset="0%" />
+							<stop stopColor="#6ee7b7" offset="100%" />
 						</linearGradient>
 						<linearGradient
 							x1="1.733%"
@@ -327,8 +266,8 @@ export function HeroIllustration() {
 							y2="100%"
 							id="browser-j"
 						>
-							<stop stopColor="#5DFBD7" offset="0%" />
-							<stop stopColor="#5DFBD7" stopOpacity="0" offset="100%" />
+							<stop stopColor="#6ee7b7" offset="0%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0" offset="100%" />
 						</linearGradient>
 						<linearGradient
 							x1="92.458%"
@@ -337,9 +276,9 @@ export function HeroIllustration() {
 							y2="100%"
 							id="browser-k"
 						>
-							<stop stopColor="#5DFBD7" stopOpacity="0" offset="0%" />
-							<stop stopColor="#5DFBD7" stopOpacity="0.513" offset="48.724%" />
-							<stop stopColor="#5DFBD7" stopOpacity="0" offset="100%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0" offset="0%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0.513" offset="48.724%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0" offset="100%" />
 						</linearGradient>
 						<linearGradient
 							x1="92.458%"
@@ -348,9 +287,9 @@ export function HeroIllustration() {
 							y2="100%"
 							id="browser-l"
 						>
-							<stop stopColor="#5DFBD7" stopOpacity="0" offset="0%" />
-							<stop stopColor="#5DFBD7" stopOpacity="0.513" offset="47.494%" />
-							<stop stopColor="#5DFBD7" stopOpacity="0" offset="100%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0" offset="0%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0.513" offset="47.494%" />
+							<stop stopColor="#6ee7b7" stopOpacity="0" offset="100%" />
 						</linearGradient>
 						<filter
 							x="-23.1%"
@@ -388,8 +327,8 @@ export function HeroIllustration() {
 							y2="50%"
 							id="browser-n"
 						>
-							<stop stopColor="#DAD8FF" offset="0%" />
-							<stop stopColor="#857DF3" offset="100%" />
+							<stop stopColor="#c7d2fe" offset="0%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</linearGradient>
 						<filter
 							x="-500%"
@@ -416,11 +355,11 @@ export function HeroIllustration() {
 							width="800"
 							height="450"
 							rx="2"
-							fill="#FFF"
+							fill="#ffffff"
 							filter="url(#dropshadow-1)"
 						/>
-						<rect width="800" height="450" rx="2" fill="#FFF" />
-						<path fill="#DDE7EF" d="M0 32h800v1H0z" />
+						<rect width="800" height="450" rx="2" fill="#ffffff" />
+						<path fill="#e2e8f0" d="M0 32h800v1H0z" />
 						<circle fill="url(#browser-a)" cx="24" cy="16" r="4" />
 						<circle fill="url(#browser-b)" cx="40" cy="16" r="4" />
 						<circle fill="url(#browser-c)" cx="56" cy="16" r="4" />
@@ -493,7 +432,7 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[1] = el)}
-				className="hero-ball hero-ball-3 is-revealing absolute"
+				className="hero-ball hero-ball-3 absolute drop-shadow-2xl"
 				style={{ top: '402px', left: '440px' }}
 			>
 				<svg
@@ -512,43 +451,12 @@ export function HeroIllustration() {
 							gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
 							id="ball-3-a"
 						>
-							<stop stopColor="#F8F7FF" offset="0%" />
-							<stop stopColor="#DAD8FF" offset="34.827%" />
-							<stop stopColor="#9B95F3" offset="100%" />
+							<stop stopColor="#eef2ff" offset="0%" />
+							<stop stopColor="#c7d2fe" offset="34.827%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</radialGradient>
-						<filter
-							x="-500%"
-							y="-500%"
-							width="1000%"
-							height="1000%"
-							filterUnits="objectBoundingBox"
-							id="dropshadow-ball-3"
-						>
-							<feOffset
-								dx="24"
-								dy="24"
-								in="SourceAlpha"
-								result="shadowOffsetOuter"
-							/>
-							<feGaussianBlur
-								stdDeviation="24"
-								in="shadowOffsetOuter"
-								result="shadowBlurOuter"
-							/>
-							<feColorMatrix
-								values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-								in="shadowBlurOuter"
-							/>
-						</filter>
 					</defs>
-					<circle
-						cx="40"
-						cy="40"
-						r="40"
-						fill="#FFF"
-						fillRule="evenodd"
-						filter="url(#dropshadow-ball-3)"
-					/>
+					<circle cx="40" cy="40" r="40" fill="#ffffff" fillRule="evenodd" />
 					<circle
 						cx="40"
 						cy="40"
@@ -560,8 +468,7 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[2] = el)}
-				className="hero-ball hero-ball-4 is-revealing absolute"
-				style={{ top: '-75px', left: '290px' }}
+				className="hero-ball hero-ball-4 absolute -top-5 left-44 lg:-top-20 lg:left-72"
 			>
 				<svg
 					width="40"
@@ -579,9 +486,9 @@ export function HeroIllustration() {
 							gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
 							id="ball-4-a"
 						>
-							<stop stopColor="#F8F7FF" offset="0%" />
-							<stop stopColor="#DAD8FF" offset="34.827%" />
-							<stop stopColor="#9B95F3" offset="100%" />
+							<stop stopColor="#eef2ff" offset="0%" />
+							<stop stopColor="#c7d2fe" offset="34.827%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</radialGradient>
 						<filter
 							x="-500%"
@@ -612,7 +519,7 @@ export function HeroIllustration() {
 						cx="20"
 						cy="20"
 						r="20"
-						fill="#FFF"
+						fill="#ffffff"
 						fillRule="evenodd"
 						filter="url(#dropshadow-ball-4)"
 					/>
@@ -627,8 +534,7 @@ export function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[3] = el)}
-				className="hero-ball hero-ball-5 is-revealing absolute"
-				style={{ top: '500px' }}
+				className="hero-ball hero-ball-5 absolute lg:-bottom-20 lg:left-80"
 			>
 				<svg
 					width="24"
@@ -646,9 +552,9 @@ export function HeroIllustration() {
 							gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
 							id="ball-5-a"
 						>
-							<stop stopColor="#F8F7FF" offset="0%" />
-							<stop stopColor="#DAD8FF" offset="34.827%" />
-							<stop stopColor="#9B95F3" offset="100%" />
+							<stop stopColor="#eef2ff" offset="0%" />
+							<stop stopColor="#c7d2fe" offset="34.827%" />
+							<stop stopColor="#818cf8" offset="100%" />
 						</radialGradient>
 						<filter
 							x="-500%"
@@ -679,7 +585,7 @@ export function HeroIllustration() {
 						cx="12"
 						cy="12"
 						r="12"
-						fill="#FFF"
+						fill="#ffffff"
 						fillRule="evenodd"
 						filter="url(#dropshadow-ball-5)"
 					/>
@@ -692,6 +598,6 @@ export function HeroIllustration() {
 					/>
 				</svg>
 			</div>
-		</>
+		</div>
 	)
 }

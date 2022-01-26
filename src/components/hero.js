@@ -27,19 +27,19 @@ export function Hero({ title, content, illustration: Illustration }) {
 			<div className="hero mx-auto w-full max-w-6xl px-6">
 				<div className="hero-inner relative lg:flex">
 					<div
-						className="hero-copy pt-10 pb-16 lg:pt-16 lg:pr-20"
+						className="hero-copy bg-white pt-10 pb-16 lg:pt-16 lg:pr-20"
 						style={{ minWidth: '600px' }}
 					>
 						<div className="mx-auto w-full max-w-3xl">
 							<h1
 								ref={(el) => (scrollRevealRef.current[0] = el)}
-								className="is-revealing mt-0 mb-4 text-4xl font-bold md:text-5xl "
+								className="mt-0 mb-4 text-4xl font-bold md:text-5xl "
 							>
 								{title}
 							</h1>
 							<p
 								ref={(el) => (scrollRevealRef.current[1] = el)}
-								className="is-revealing prose prose-xl px-16 md:px-0"
+								className="prose prose-xl px-16 text-gray-500 md:px-0"
 							>
 								{content}
 							</p>
@@ -54,7 +54,7 @@ export function Hero({ title, content, illustration: Illustration }) {
 						</div>
 					</div>
 
-					<div className="relative right-10 py-10 md:right-20 lg:right-0 lg:p-0">
+					<div className="relative -ml-6 -mr-6 py-10 lg:p-0">
 						<Illustration />
 					</div>
 				</div>
