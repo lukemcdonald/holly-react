@@ -1,19 +1,21 @@
 {
   "name": "holly-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/lukemcdonald/holly-react.git"
   },
   "author": "Luke McDonald (https://lukemcdonald.com/)",
   "license": "MIT",
+  "homepage": "https://lukemcdonald.github.io/holly-react",
   "scripts": {
-    "build": "npm run build:css && build:js",
-    "build:css": "postcss styles/tailwind.css -o ./src/assets/style.css",
+    "build": "concurrently \"npm run build:css\" \"npm run build:js\"",
+    "build:css": "postcss styles/tailwind.css -o src/assets/style.css",
     "build:js": "react-scripts build",
-    "deploy": "npm run build && gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"npm run start:css\" \"npm run start:js\"",
-    "start:css": "postcss styles/tailwind.css -o ./src/assets/style.css --watch",
+    "start:css": "postcss styles/tailwind.css -o src/assets/style.css --watch",
     "start:js": "react-scripts start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

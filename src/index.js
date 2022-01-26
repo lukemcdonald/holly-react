@@ -11,7 +11,9 @@ import Support from './routes/support'
 import './assets/style.css'
 
 ReactDOM.render(
-	<BrowserRouter>
+	// The `basename={process.env.PUBLIC_URL}` is needed for Github Pages to
+	// work with BrowserRouter.
+	<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<Routes>
 			<Route path="/" element={<Home />} />
 			<Route path="about" element={<About />} />
