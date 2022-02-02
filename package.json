@@ -1,80 +1,52 @@
 {
-  "name": "holly-react",
   "version": "1.0.1",
+  "name": "holly-react",
+  "description": "React version of Holly",
+  "author": "Luke McDonald (https://lukemcdonald.com/)",
+  "homepage": "https://lukemcdonald.github.io/holly-react",
+  "keywords": [],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/lukemcdonald/holly-react.git"
   },
-  "author": "Luke McDonald (https://lukemcdonald.com/)",
-  "license": "MIT",
-  "homepage": "https://lukemcdonald.github.io/holly-react",
-  "scripts": {
-    "build": "concurrently \"npm run build:css\" \"npm run build:js\"",
-    "build:css": "postcss styles/tailwind.css -o src/assets/style.css",
-    "build:js": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "concurrently \"npm run start:css\" \"npm run start:js\"",
-    "start:css": "postcss styles/tailwind.css -o src/assets/style.css --watch",
-    "start:js": "react-scripts start",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+  "bugs": {
+    "url": "https://github.com/lukemcdonald/holly-react/issues"
   },
-  "eslintConfig": {
-    "extends": [
-      "wesbos"
-    ],
-    "rules": {
-      "react/jsx-props-no-spreading": "off",
-      "react/prop-types": 0
-    }
+  "scripts": {
+    "build": "npm run build:css && vite build",
+    "build:css": "postcss styles/tailwind.css -o src/assets/styles.css",
+    "dev": "concurrently \"npm run dev:css\" \"vite\"",
+    "dev:css": "postcss styles/tailwind.css -o src/assets/styles.css --watch",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.0",
-    "autoprefixer": "^10.4.2",
     "clsx": "^1.1.1",
-    "postcss": "^8.4.5",
-    "postcss-cli": "^9.1.0",
-    "postcss-custom-properties": "^12.1.3",
+    "gh-pages": "^3.2.3",
     "postcss-import": "^14.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
-    "scrollreveal": "^4.0.9",
-    "tailwindcss": "^3.0.16"
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.12",
-    "@babel/eslint-parser": "^7.16.5",
-    "@babel/preset-react": "^7.16.7",
-    "@types/node": "^16.11.21",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
-    "babel-eslint": "^10.1.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.1",
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.2",
     "concurrently": "^7.0.0",
-    "eslint": "^8.7.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-config-wesbos": "^3.0.2",
-    "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.4",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.5.5",
-    "watch": "^1.0.2"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "tailwindcss": "^3.0.15",
+    "vite": "^2.7.2"
+  }
 }
