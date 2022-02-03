@@ -30,11 +30,17 @@ export function ArticleHeader({ children }) {
 }
 
 export function ArticleTitle({ children }) {
-  return <h1 className="mt-12 mb-3 text-4xl font-bold lg:text-5xl lg:leading-tight">{children}</h1>
+  return (
+    <h1 className="mt-12 mb-3 text-4xl font-bold lg:text-5xl lg:leading-tight">
+      {children}
+    </h1>
+  )
 }
 
 export function ArticleBody({ children }) {
-  return <div className="prose mb-8 md:px-16 lg:prose-xl lg:px-0">{children}</div>
+  return (
+    <div className="prose mb-8 md:px-16 lg:prose-xl lg:px-0">{children}</div>
+  )
 }
 
 export function ArticleMedia({ children }) {

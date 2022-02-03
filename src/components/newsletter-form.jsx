@@ -14,7 +14,10 @@ export function NewsletterForm({ className, onSubmit, submitBtn }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={classnames('newsletter-form is-revealing md:flex', className)}>
+    <form
+      onSubmit={handleSubmit}
+      className={classnames('newsletter-form is-revealing md:flex', className)}
+    >
       <div className="mr-2 flex-shrink flex-grow">
         <label className="hidden" htmlFor="email" aria-hidden="true">
           Email

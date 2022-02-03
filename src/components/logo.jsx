@@ -28,8 +28,16 @@ export function Logo() {
         />
       </defs>
       <g transform="translate(-7 -7)" fill="none" fillRule="evenodd">
-        <use fill="url(#logo-b)" transform="rotate(45 23 23)" xlinkHref="#logo-a" />
-        <use fill="url(#logo-d)" transform="scale(-1 1) rotate(45 0 -32.527)" xlinkHref="#logo-c" />
+        <use
+          fill="url(#logo-b)"
+          transform="rotate(45 23 23)"
+          xlinkHref="#logo-a"
+        />
+        <use
+          fill="url(#logo-d)"
+          transform="scale(-1 1) rotate(45 0 -32.527)"
+          xlinkHref="#logo-c"
+        />
       </g>
     </svg>
   )

@@ -26,12 +26,21 @@ export function Hero({ title, content, illustration: Illustration }) {
     <section className="text-center lg:w-full lg:py-20 lg:text-left">
       <div className="hero mx-auto w-full max-w-6xl px-6">
         <div className="hero-inner relative lg:flex">
-          <div className="hero-copy bg-white pt-10 pb-16 lg:pt-16 lg:pr-20" style={{ minWidth: '600px' }}>
+          <div
+            className="hero-copy bg-white pt-10 pb-16 lg:pt-16 lg:pr-20"
+            style={{ minWidth: '600px' }}
+          >
             <div className="mx-auto w-full max-w-3xl">
-              <h1 ref={(el) => (scrollRevealRef.current[0] = el)} className="mt-0 mb-4 text-4xl font-bold md:text-5xl ">
+              <h1
+                ref={(el) => (scrollRevealRef.current[0] = el)}
+                className="mt-0 mb-4 text-4xl font-bold md:text-5xl "
+              >
                 {title}
               </h1>
-              <p ref={(el) => (scrollRevealRef.current[1] = el)} className="prose prose-xl px-16 text-gray-500 md:px-0">
+              <p
+                ref={(el) => (scrollRevealRef.current[1] = el)}
+                className="prose prose-xl px-16 text-gray-500 md:px-0"
+              >
                 {content}
               </p>
             </div>
