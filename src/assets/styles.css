@@ -1188,6 +1188,9 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .flex {
   display: flex;
 }
@@ -1367,6 +1370,10 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1375,6 +1382,9 @@ select {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
 }
 .leading-5 {
   line-height: 1.25rem;
@@ -1395,6 +1405,14 @@ select {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 .no-underline {
   -webkit-text-decoration-line: none;

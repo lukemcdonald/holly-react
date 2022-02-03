@@ -3,10 +3,14 @@ import classnames from 'clsx'
 
 export function NewsletterForm({ className, onSubmit, submitBtn }) {
   const [email, setEmail] = React.useState('')
+  const [success, setSuccess] = React.useState(false)
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
-    onSubmit(email)
+    const result = await onSubmit(email)
+    console.log(result)
+    setEmail('')
+    setSuccess(true)
   }
 
   function handleChange(event) {
@@ -33,6 +37,11 @@ export function NewsletterForm({ className, onSubmit, submitBtn }) {
           autoComplete="off"
           className="w-full rounded-sm border border-gray-300 bg-white px-4 py-3 text-sm text-gray-500 shadow-none"
         />
+        {success && (
+          <div className="mt-2 text-xs italic text-gray-500">
+            Email submitted successfully!
+          </div>
+        )}
       </div>
 
       <div className="control">
