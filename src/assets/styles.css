@@ -2,7 +2,7 @@
  * Base
  * -----------------------------------------------------------------------------
  */
-/*! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
  */
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -361,6 +361,10 @@ input::placeholder,textarea::placeholder {
 ::-webkit-date-and-time-value {
   min-height: 1.5em;
 }
+::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 select {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   background-position: right 0.5rem center;
@@ -368,7 +372,8 @@ select {
   background-size: 1.5em 1.5em;
   padding-right: 2.5rem;
   -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+     color-adjust: exact;
+          print-color-adjust: exact;
 }
 [multiple] {
   background-image: initial;
@@ -377,7 +382,8 @@ select {
   background-size: initial;
   padding-right: 0.75rem;
   -webkit-print-color-adjust: unset;
-          color-adjust: unset;
+     color-adjust: unset;
+          print-color-adjust: unset;
 }
 [type='checkbox'],[type='radio'] {
   -webkit-appearance: none;
@@ -385,7 +391,8 @@ select {
           appearance: none;
   padding: 0;
   -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+     color-adjust: exact;
+          print-color-adjust: exact;
   display: inline-block;
   vertical-align: middle;
   background-origin: border-box;
@@ -458,6 +465,7 @@ select {
   line-height: inherit;
 }
 [type='file']:focus {
+  outline: 1px solid ButtonText;
   outline: 1px auto -webkit-focus-ring-color;
 }
 *, ::before, ::after {
@@ -1049,16 +1057,10 @@ select {
 @media (min-width: 992px) {
 			.article::before {
     top: -5rem;
-  }
-			.article::before {
     height: 100vh;
-  }
-			.article::before {
     width: 100%;
-  }
-			.article::before {
 				left: 620px;
-			}
+  }
 
 		.article--content {
 			min-width: 600px;
@@ -1185,11 +1187,11 @@ select {
 .ml-4 {
   margin-left: 1rem;
 }
-.-mt-px {
-  margin-top: -1px;
-}
 .mt-2 {
   margin-top: 0.5rem;
+}
+.-mt-px {
+  margin-top: -1px;
 }
 .flex {
   display: flex;
@@ -1405,14 +1407,6 @@ select {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
-}
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(71 85 105 / var(--tw-text-opacity));
-}
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 .no-underline {
   -webkit-text-decoration-line: none;
