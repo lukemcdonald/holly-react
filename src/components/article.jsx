@@ -14,32 +14,19 @@ export function ArticleContent({ title, children }) {
   return (
     <div className="article--content pb-16 pr-20 pt-11 lg:pt-16">
       <div className="mx-auto w-full max-w-3xl">
-        {title && <ArticleHeader>{title}</ArticleHeader>}
-        {children && <ArticleBody>{children}</ArticleBody>}
+        {title && (
+          <header>
+            <h1 className="mt-12 mb-3 text-4xl font-bold lg:text-5xl lg:leading-tight">
+              {title}
+            </h1>
+          </header>
+        )}
+
+        <div className="prose mb-8 md:px-16 lg:prose-xl lg:px-0">
+          {children}
+        </div>
       </div>
     </div>
-  )
-}
-
-export function ArticleHeader({ children }) {
-  return (
-    <header>
-      <ArticleTitle>{children}</ArticleTitle>
-    </header>
-  )
-}
-
-export function ArticleTitle({ children }) {
-  return (
-    <h1 className="mt-12 mb-3 text-4xl font-bold lg:text-5xl lg:leading-tight">
-      {children}
-    </h1>
-  )
-}
-
-export function ArticleBody({ children }) {
-  return (
-    <div className="prose mb-8 md:px-16 lg:prose-xl lg:px-0">{children}</div>
   )
 }
 
