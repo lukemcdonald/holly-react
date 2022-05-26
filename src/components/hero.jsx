@@ -3,7 +3,7 @@ import ScrollReveal from 'scrollreveal'
 
 import { NewsletterForm } from './newsletter-form'
 
-export function Hero({ title, content, illustration: Illustration }) {
+export function Hero({ title, content, illustration }) {
   const scrollRevealRef = useRef([])
 
   useEffect(() => {
@@ -62,9 +62,11 @@ export function Hero({ title, content, illustration: Illustration }) {
             </div>
           </div>
 
-          <div className="relative -ml-6 -mr-6 py-10 lg:p-0">
-            <Illustration />
-          </div>
+          {!!illustration && (
+            <div className="relative -ml-6 -mr-6 py-10 lg:p-0">
+              {illustration}
+            </div>
+          )}
         </div>
       </div>
     </section>
