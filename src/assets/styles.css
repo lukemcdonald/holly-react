@@ -516,6 +516,39 @@ select {
  * Components
  * -----------------------------------------------------------------------------
  */
+.container {
+  width: 100%;
+}
+@media (min-width: 420px) {
+  .container {
+    max-width: 420px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
