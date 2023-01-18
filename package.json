@@ -23,6 +23,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@types/node": "^18.11.18",
     "clsx": "^1.2.1",
     "gh-pages": "^4.0.0",
     "postcss-import": "^15.1.0",

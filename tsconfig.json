@@ -14,7 +14,29 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "noEmit": true,
-      "jsx": "react-jsx"
+      "jsx": "react-jsx",
+      "paths": {
+        "@components": ["./src/components"],
+        "@constants": ["./src/constants"],
+        "@store": ["./src/store"],
+        "@routes/*": ["./src/routes/*"],
+        "@contexts": ["./src/contexts"],
+        "@hooks": ["./src/hooks"],
+        "@hooks/*": ["./src/hooks/*"],
+        "@MyTypes": ["./src/types"],
+        "@MyTypes/*": ["./src/types/*"],
+        "@configs/*": ["./src/configs/*"],
+        "@assets": ["./src/assets"],
+        "@assets/*": ["./src/assets/*"],
+        "@constants/*": ["./src/constants/*"],
+        "@utils/*": ["./src/utils/*"],
+        "@services": ["./src/services"],
+        "@pages": ["./src/pages"],
+        "@pages/*": ["./src/pages/*"],
+        "@": ["./src"],
+        "@/*": ["./src/*"],
+        "@features": ["./src/features/*"]
+      }
     },
     "include": ["src", "vite-env.d.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]

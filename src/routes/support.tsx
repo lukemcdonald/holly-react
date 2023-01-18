@@ -1,7 +1,6 @@
+import { Article, ArticleContent, ArticleMedia } from '@/components/article'
+import { Layout } from '@/components/layout'
 import React from 'react'
-
-import { Layout } from '../components/layout'
-import { Article, ArticleContent, ArticleMedia } from '../components/article'
 
 export default function SupportPage() {
   return (
