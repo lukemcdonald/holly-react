@@ -18,6 +18,7 @@
     "build:css": "postcss styles/tailwind.css -o src/assets/styles.css",
     "dev": "concurrently \"npm run dev:css\" \"vite\"",
     "dev:css": "postcss styles/tailwind.css -o src/assets/styles.css --watch",
+    "format": "prettier --write .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

@@ -3,11 +3,24 @@ import ScrollReveal from 'scrollreveal'
 
 import { NewsletterForm } from './newsletter-form'
 
-export function Hero({ title, content, illustration }) {
-  const scrollRevealRef = useRef([])
+type ScrollRevealRefElement =
+  | HTMLHeadingElement
+  | HTMLParagraphElement
+  | HTMLDivElement
+
+export function Hero({
+  content,
+  illustration,
+  title,
+}: {
+  content: string
+  illustration?: React.ReactNode
+  title: string
+}) {
+  const scrollRevealRef = useRef<ScrollRevealRefElement[]>([])
 
   useEffect(() => {
-    if (scrollRevealRef.current) {
+    if (scrollRevealRef.current.length > 0) {
       scrollRevealRef.current.map((ref, index) =>
         ScrollReveal().reveal(scrollRevealRef.current[index], {
           duration: 1000,
@@ -22,7 +35,7 @@ export function Hero({ title, content, illustration }) {
     return () => ScrollReveal().destroy()
   }, [])
 
-  function onNewsletterSubmit(values) {
+  function onNewsletterSubmit(values: any) {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ values })
@@ -40,23 +53,31 @@ export function Hero({ title, content, illustration }) {
           >
             <div className="mx-auto w-full max-w-3xl">
               <h1
-                ref={(el) => (scrollRevealRef.current[0] = el)}
+                ref={(el: ScrollRevealRefElement) =>
+                  scrollRevealRef.current.push(el)
+                }
                 className="mt-0 mb-4 text-4xl font-bold md:text-5xl "
               >
                 {title}
               </h1>
               <p
-                ref={(el) => (scrollRevealRef.current[1] = el)}
+                ref={(el: ScrollRevealRefElement) =>
+                  scrollRevealRef.current.push(el)
+                }
                 className="prose prose-xl px-16 text-gray-500 md:px-0"
               >
                 {content}
               </p>
             </div>
 
-            <div ref={(el) => (scrollRevealRef.current[2] = el)}>
+            <div
+              ref={(el: ScrollRevealRefElement) =>
+                scrollRevealRef.current.push(el)
+              }
+            >
               <NewsletterForm
                 className="m-0 mt-8 max-w-md md:flex"
-                submitBtn="Get early access"
+                submitText="Get early access"
                 onSubmit={onNewsletterSubmit}
               />
             </div>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 
 import { BackgroundGradient } from './background-gradient'
 import { Header } from './header'
 import { Footer } from './footer'
 
-export function Layout({ children }) {
+export function Layout({ children }: PropsWithChildren) {
   return (
     <div className="relative mx-auto my-0 flex min-h-screen max-w-screen-2xl flex-col overflow-hidden bg-white shadow-2xl">
       <BackgroundGradient className="absolute top-0 bottom-0 left-1/2 ml-28 hidden w-1/2 lg:block" />

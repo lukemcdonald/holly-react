@@ -1,14 +1,14 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, MutableRefObject } from 'react'
 import ScrollReveal from 'scrollreveal'
 
 import { BackgroundGradient } from './background-gradient'
 
 export function HeroIllustration() {
-  const scrollRevealOneRef = useRef([])
-  const scrollRevealTwoRef = useRef([])
+  const scrollRevealOneRef = useRef<HTMLDivElement[]>([])
+  const scrollRevealTwoRef = useRef<HTMLDivElement[]>([])
 
   useEffect(() => {
-    if (scrollRevealOneRef.current) {
+    if (scrollRevealOneRef.current.length > 0) {
       scrollRevealOneRef.current.map((ref, index) =>
         ScrollReveal().reveal(scrollRevealOneRef.current[index], {
           delay: 1000,
@@ -21,7 +21,7 @@ export function HeroIllustration() {
       )
     }
 
-    if (scrollRevealTwoRef.current) {
+    if (scrollRevealTwoRef.current.length > 0) {
       scrollRevealTwoRef.current.map((ref, index) =>
         ScrollReveal().reveal(scrollRevealTwoRef.current[index], {
           delay: 400,
@@ -41,7 +41,7 @@ export function HeroIllustration() {
     <div>
       <BackgroundGradient className="absolute inset-0 lg:hidden" />
       <div
-        ref={(el) => (scrollRevealTwoRef.current[0] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
         className="absolute top-4 left-16 lg:-top-20 lg:left-24"
       >
         <svg
@@ -70,7 +70,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealTwoRef.current[1] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
         className="absolute hidden lg:-bottom-28 lg:left-40 lg:block"
       >
         <svg
@@ -100,7 +100,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealTwoRef.current[2] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
         className="absolute -top-48 left-96 hidden drop-shadow-2xl lg:block"
       >
         <svg
@@ -135,7 +135,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealOneRef.current[0] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-2 absolute left-16 top-72 drop-shadow-2xl lg:top-80 lg:-left-16"
       >
         <svg
@@ -170,7 +170,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealTwoRef.current[3] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
         className="hero-illustration-browser drop-shadow-2xl"
       >
         <svg
@@ -431,7 +431,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealOneRef.current[1] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-3 absolute drop-shadow-2xl"
         style={{ top: '402px', left: '440px' }}
       >
@@ -467,7 +467,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealOneRef.current[2] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-4 absolute -top-5 left-44 lg:-top-20 lg:left-72"
       >
         <svg
@@ -533,7 +533,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el) => (scrollRevealOneRef.current[3] = el)}
+        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-5 absolute lg:-bottom-20 lg:left-80"
       >
         <svg

@@ -20,7 +20,7 @@ const SOCIAL_LINKS = [
   },
 ]
 
-export function SocialLinks({ className }) {
+export function SocialLinks({ className }: { className?: string }) {
   return (
     <ul className={classnames('list-reset', className)}>
       {SOCIAL_LINKS.map((link) => (
@@ -30,14 +30,16 @@ export function SocialLinks({ className }) {
   )
 }
 
-export function SocialLinkItem({ link }) {
-  const { name, url, svg } = link
-
+export function SocialLinkItem({
+  link,
+}: {
+  link: (typeof SOCIAL_LINKS)[number]
+}) {
   return (
     <li className="ml-4">
-      <a href={url}>
-        <span className="sr-only">{name}</span>
-        <div dangerouslySetInnerHTML={{ __html: svg }} />
+      <a href={link.url}>
+        <span className="sr-only">{link.name}</span>
+        <div dangerouslySetInnerHTML={{ __html: link.svg }} />
       </a>
     </li>
   )
