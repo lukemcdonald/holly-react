@@ -22,7 +22,7 @@ export function ArticleContent({ title, children }) {
           </header>
         )}
 
-        <div className="prose mb-8 md:px-16 lg:prose-xl lg:px-0">
+        <div className="prose mb-8 md:px-16 lg:px-0 lg:prose-xl">
           {children}
         </div>
       </div>

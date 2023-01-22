@@ -1,4 +1,3 @@
-
 import AboutPage from '@routes/about'
 import ContactPage from '@routes/contact'
 import FaqsPage from '@routes/faqs'
@@ -8,7 +7,6 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { ScrollToTop } from './components/scroll-to-top'
-
 
 export default function App() {
   /**
