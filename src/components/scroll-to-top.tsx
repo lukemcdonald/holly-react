@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { useLocation } from 'react-router-dom'
 
-export function ScrollToTop({ children }) {
+export function ScrollToTop({ children }: PropsWithChildren) {
   const location = useLocation()
 
   React.useLayoutEffect(() => {
