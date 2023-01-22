@@ -553,39 +553,6 @@ select {
  * Components
  * -----------------------------------------------------------------------------
  */
-.container {
-  width: 100%;
-}
-@media (min-width: 420px) {
-  .container {
-    max-width: 420px;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 576px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 992px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
-}
 .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1136,63 +1103,63 @@ select {
   margin-bottom: 0;
 }
 .article--media::before {
-			content: '';
-			position: absolute;
-			right: 0px;
-			top: 0px;
-			--tw-bg-opacity: 1;
-			background-color: rgb(129 140 248 / var(--tw-bg-opacity));
-			background-image: linear-gradient(to right, var(--tw-gradient-stops));
-			--tw-gradient-from: #a5b4fc;
-			--tw-gradient-to: rgb(165 180 252 / 0);
-			--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-			--tw-gradient-to: #6366f1;
-			left: -150px;
-			bottom: -300px;
-			/* background: #8179f2;
+      content: '';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      --tw-bg-opacity: 1;
+      background-color: rgb(129 140 248 / var(--tw-bg-opacity));
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      --tw-gradient-from: #a5b4fc;
+      --tw-gradient-to: rgb(165 180 252 / 0);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      --tw-gradient-to: #6366f1;
+      left: -150px;
+      bottom: -300px;
+      /* background: #8179f2;
       background: linear-gradient(to bottom, #665DF0 0, #818cf8 100%); */
-		}
+    }
 .article--media img,
-		.article--media svg,
-		.article--media iframe {
+    .article--media svg,
+    .article--media iframe {
   visibility: visible;
   position: relative;
   margin-left: auto;
   max-width: none;
 }
 @media (min-width: 768px) {
-		.article--media {
+    .article--media {
     right: -5rem;
   }
 
-			.article--media img,
-			.article--media svg,
-			.article--media iframe {
-				max-width: 640px;
-			}
-	}
+      .article--media img,
+      .article--media svg,
+      .article--media iframe {
+        max-width: 640px;
+      }
+  }
 @media (min-width: 992px) {
-			.article::before {
+      .article::before {
     top: -5rem;
     height: 100vh;
     width: 100%;
-				left: 620px;
+        left: 620px;
   }
 
-		.article--content {
-			min-width: 600px;
-			max-width: 62%;
-		}
-			.article--media::before {
-				content: normal;
-			}
+    .article--content {
+      min-width: 600px;
+      max-width: 62%;
+    }
+      .article--media::before {
+        content: normal;
+      }
 
-			.article--media img,
-			.article--media svg,
-			.article--media iframe {
+      .article--media img,
+      .article--media svg,
+      .article--media iframe {
     max-width: 48rem;
   }
-	}
+  }
 /*--------------------------------------------------------------
 # Entry
 --------------------------------------------------------------*/
@@ -1808,12 +1775,12 @@ select {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-  .lg\:prose-xl :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"] *)) {
-    padding-left: 0;
-  }
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .lg\:prose-xl :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
   }
   .lg\:py-0 {
     padding-top: 0px;
