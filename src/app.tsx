@@ -1,8 +1,8 @@
-import AboutPage from '@routes/about'
-import ContactPage from '@routes/contact'
-import FaqsPage from '@routes/faqs'
-import HomePage from '@routes/home'
-import SupportPage from '@routes/support'
+import AboutPage from '@/routes/about'
+import ContactPage from '@/routes/contact'
+import FaqsPage from '@/routes/faqs'
+import HomePage from '@/routes/home'
+import SupportPage from '@/routes/support'
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 

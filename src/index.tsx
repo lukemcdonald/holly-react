@@ -4,9 +4,8 @@ import App from './app'
 
 import './assets/styles.css'
 
-const container = document.getElementById('root') as HTMLElement
-const root = createRoot(container)
-root.render(
+const root = document.getElementById('root') as HTMLElement
+createRoot(root).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
