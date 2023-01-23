@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 
 import { BackgroundGradient } from './background-gradient'
 import { Header } from './header'

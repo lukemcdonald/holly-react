@@ -1,4 +1,3 @@
-import React from 'react'
 import classnames from 'clsx'
 
 export function BackgroundGradient({ className }: { className?: string }) {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, MutableRefObject } from 'react'
+import { useRef, useEffect } from 'react'
 import ScrollReveal from 'scrollreveal'
 
 import { BackgroundGradient } from './background-gradient'

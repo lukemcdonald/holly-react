@@ -31,7 +31,6 @@
     "validate": "run-p lint typecheck"
   },
   "dependencies": {
-    "@types/node": "^18.11.18",
     "clsx": "^1.2.1",
     "gh-pages": "^5.0.0",
     "postcss-import": "^15.1.0",
@@ -43,6 +42,8 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
+    "@types/eslint": "^8.4.10",
+    "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/scrollreveal": "^0.0.8",

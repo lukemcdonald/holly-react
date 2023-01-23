@@ -1,4 +1,3 @@
-import React from 'react'
 import classnames from 'clsx'
 
 const SOCIAL_LINKS = [

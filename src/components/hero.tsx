@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect, ReactNode } from 'react'
 import ScrollReveal from 'scrollreveal'
 
 import { NewsletterForm } from './newsletter-form'
@@ -14,7 +14,7 @@ export function Hero({
   title,
 }: {
   content: string
-  illustration?: React.ReactNode
+  illustration?: ReactNode
   title: string
 }) {
   const scrollRevealRef = useRef<ScrollRevealRefElement[]>([])
