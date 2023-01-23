@@ -15,8 +15,9 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
+    "typeRoots": ["./node_modules/@types"],
     "useDefineForClassFields": true
   },
-  "include": ["src"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
