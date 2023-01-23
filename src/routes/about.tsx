@@ -20,7 +20,7 @@ export default function AboutPage() {
         <ArticleMedia>
           <img
             alt="Lorem Picsum"
-            className="lg:aspect-[5/7] lg:w-full"
+            className="mx-auto lg:aspect-[5/7] lg:w-full"
             width="420"
             height="640"
             src="https://picsum.photos/420/640?grayscale"

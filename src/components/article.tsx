@@ -33,7 +33,7 @@ export function ArticleContent({
 
 export function ArticleMedia({ children }: PropsWithChildren) {
   return (
-    <figure className="relative flex max-w-[40rem] justify-center py-10 lg:-right-10 lg:w-full lg:py-0">
+    <figure className="relative max-w-[40rem] py-10 lg:-right-10 lg:w-full lg:py-0">
       {children}
     </figure>
   )
