@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: 'src',
-  base: './',
+  base: '/holly-react/',
   build: {
     outDir: '../dist',
   },
