@@ -3,8 +3,7 @@ import ContactPage from '@/routes/contact'
 import FaqsPage from '@/routes/faqs'
 import HomePage from '@/routes/home'
 import SupportPage from '@/routes/support'
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { ScrollToTop } from './components/scroll-to-top'
 

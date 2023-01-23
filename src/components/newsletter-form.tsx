@@ -1,5 +1,6 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react'
 import classnames from 'clsx'
+import type { ChangeEvent, FormEvent } from 'react'
+import { useState } from 'react'
 
 export function NewsletterForm({
   className,
