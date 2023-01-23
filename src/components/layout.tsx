@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
 
 import { BackgroundGradient } from './background-gradient'
-import { Header } from './header'
 import { Footer } from './footer'
+import { Header } from './header'
 
 export function Layout({ children }: PropsWithChildren) {
   return (

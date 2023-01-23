@@ -1,4 +1,4 @@
-import { useRef, useEffect, ReactNode } from 'react'
+import { ReactNode, useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
 
 import { NewsletterForm } from './newsletter-form'
