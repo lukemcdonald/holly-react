@@ -6,9 +6,9 @@ export default function AboutPage() {
     <Layout>
       <Article>
         <ArticleContent title="About">
+          {/* prettier-ignore */}
           <p>
-            Holly is a free HTML/CSS landing page designed and developed by
-            @pacovitiello and @DavidePacilio!
+            Holly is a free HTML/CSS landing page designed and developed by <a href="https://twitter.com/pacovitiello">@pacovitiello</a> and <a href="https://twitter.com/DavidePacilio">@DavidePacilio</a>!
           </p>
           <p>
             Holly is suitable for all kind of startups, it's easily
@@ -19,8 +19,11 @@ export default function AboutPage() {
 
         <ArticleMedia>
           <img
-            src="https://picsum.photos/420/640?grayscale"
             alt="Lorem Picsum"
+            className="lg:aspect-[5/7] lg:w-full"
+            width="420"
+            height="640"
+            src="https://picsum.photos/420/640?grayscale"
           />
         </ArticleMedia>
       </Article>

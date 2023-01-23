@@ -15,8 +15,8 @@ export function ArticleContent({
   children,
 }: PropsWithChildren<{ title?: string }>) {
   return (
-    <div className="article--content pb-16 pr-20 pt-11 lg:pt-16">
-      <div className="mx-auto w-full max-w-3xl">
+    <div className="flex-grow">
+      <div className=" prose mx-auto py-10 lg:pr-20 lg:pt-16 lg:prose-xl">
         {title && (
           <header>
             <h1 className="mt-12 mb-3 text-4xl font-bold lg:text-5xl lg:leading-tight">
@@ -25,9 +25,7 @@ export function ArticleContent({
           </header>
         )}
 
-        <div className="prose mb-8 md:px-16 lg:px-0 lg:prose-xl">
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   )
@@ -35,8 +33,8 @@ export function ArticleContent({
 
 export function ArticleMedia({ children }: PropsWithChildren) {
   return (
-    <div className="article--media relative -right-10 py-10 lg:right-0 lg:w-full lg:py-0">
-      <span className="inline-flex">{children}</span>
-    </div>
+    <figure className="relative flex max-w-[40rem] justify-center py-10 lg:-right-10 lg:w-full lg:py-0">
+      {children}
+    </figure>
   )
 }

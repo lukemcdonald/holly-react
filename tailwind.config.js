@@ -8,14 +8,6 @@ module.exports = {
       fontFamily: {
         sans: ['Fira Sans', ...fontFamily.sans],
       },
-      screens: {
-        xs: '420px',
-        sm: '576px',
-        md: '768px',
-        lg: '992px',
-        xl: '1280px',
-        '2xl': '1440px',
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -39,7 +31,4 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-  variants: {
-    extend: {},
-  },
 }

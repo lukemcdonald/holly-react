@@ -6,11 +6,17 @@ export default function ContactPage() {
     <Layout>
       <Article>
         <ArticleContent title="Contact">
-          <p>Add your contact information here.</p>
+          Add your contact information here.
         </ArticleContent>
 
         <ArticleMedia>
-          <img src="https://picsum.photos/420/640" alt="Lorem Picsum" />
+          <img
+            alt="Lorem Picsum"
+            className="lg:aspect-[5/7] lg:w-full"
+            width="420"
+            height="640"
+            src="https://picsum.photos/420/640?grayscale"
+          />
         </ArticleMedia>
       </Article>
     </Layout>
