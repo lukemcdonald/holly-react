@@ -1,4 +1,5 @@
-import { Fragment, PropsWithChildren, useLayoutEffect } from 'react'
+import type { PropsWithChildren } from 'react'
+import { Fragment, useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 export function ScrollToTop({ children }: PropsWithChildren) {
