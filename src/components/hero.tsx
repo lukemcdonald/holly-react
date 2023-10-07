@@ -29,7 +29,7 @@ export function Hero({
           easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
           origin: 'top',
           interval: 150,
-        })
+        }),
       )
     }
 
@@ -49,7 +49,7 @@ export function Hero({
       <div className="hero mx-auto w-full max-w-6xl px-6">
         <div className="hero-inner relative lg:flex">
           <div
-            className="hero-copy bg-white pt-10 pb-16 lg:pt-16 lg:pr-20"
+            className="hero-copy bg-white pb-16 pt-10 lg:pr-20 lg:pt-16"
             style={{ minWidth: '600px' }}
           >
             <div className="mx-auto w-full max-w-3xl">
@@ -57,7 +57,7 @@ export function Hero({
                 ref={(el: ScrollRevealRefElement) =>
                   scrollRevealRef.current.push(el)
                 }
-                className="mt-0 mb-4 text-4xl font-bold md:text-5xl "
+                className="mb-4 mt-0 text-4xl font-bold md:text-5xl "
               >
                 {title}
               </h1>

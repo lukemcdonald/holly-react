@@ -16,10 +16,10 @@ export function ArticleContent({
 }: PropsWithChildren<{ title?: string }>) {
   return (
     <div className="flex-grow">
-      <div className=" prose mx-auto py-10 lg:pr-20 lg:pt-16 lg:prose-xl">
+      <div className=" prose mx-auto py-10 lg:prose-xl lg:pr-20 lg:pt-16">
         {title && (
           <header>
-            <h1 className="mt-12 mb-3 text-4xl font-bold lg:text-5xl lg:leading-tight">
+            <h1 className="mb-3 mt-12 text-4xl font-bold lg:text-5xl lg:leading-tight">
               {title}
             </h1>
           </header>

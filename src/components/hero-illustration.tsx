@@ -17,7 +17,7 @@ export function HeroIllustration() {
           easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
           origin: 'bottom',
           interval: 200,
-        })
+        }),
       )
     }
 
@@ -30,7 +30,7 @@ export function HeroIllustration() {
           easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
           origin: 'right',
           interval: 150,
-        })
+        }),
       )
     }
 
@@ -42,7 +42,7 @@ export function HeroIllustration() {
       <BackgroundGradient className="absolute inset-0 lg:hidden" />
       <div
         ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
-        className="absolute top-4 left-16 lg:-top-20 lg:left-24"
+        className="absolute left-16 top-4 lg:-top-20 lg:left-24"
       >
         <svg
           width="124"
@@ -136,7 +136,7 @@ export function HeroIllustration() {
       </div>
       <div
         ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
-        className="hero-ball hero-ball-2 absolute left-16 top-72 drop-shadow-2xl lg:top-80 lg:-left-16"
+        className="hero-ball hero-ball-2 absolute left-16 top-72 drop-shadow-2xl lg:-left-16 lg:top-80"
       >
         <svg
           width="200"
