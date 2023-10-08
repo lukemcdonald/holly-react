@@ -1,8 +1,8 @@
-import classnames from 'clsx'
+import { cn } from '@/utils/cn'
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
-export function NewsletterForm({
+function NewsletterForm({
   className,
   onSubmit,
   submitText = 'Submit',
@@ -29,7 +29,7 @@ export function NewsletterForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={classnames('newsletter-form is-revealing md:flex', className)}
+      className={cn('newsletter-form is-revealing flex flex-col gap-2 sm:flex-row', className)}
     >
       <div className="mr-2 flex-shrink flex-grow">
         <label className="hidden" htmlFor="email" aria-hidden="true">
@@ -47,9 +47,7 @@ export function NewsletterForm({
           className="w-full rounded-sm border border-gray-300 bg-white px-4 py-3 text-sm text-gray-500 shadow-none"
         />
         {success && (
-          <div className="mt-2 text-xs italic text-gray-500">
-            Email submitted successfully!
-          </div>
+          <div className="mt-2 text-xs italic text-gray-500">Email submitted successfully!</div>
         )}
       </div>
 
@@ -64,3 +62,5 @@ export function NewsletterForm({
     </form>
   )
 }
+
+export default NewsletterForm

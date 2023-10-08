@@ -1,5 +1,4 @@
-import { Hero } from '@/components/hero'
-import { HeroIllustration } from '@/components/hero-illustration'
+import { Hero, HeroIllustration } from '@/components/hero'
 import { Layout } from '@/components/layout'
 
 export default function HomePage() {
