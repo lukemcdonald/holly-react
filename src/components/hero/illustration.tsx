@@ -1,16 +1,23 @@
+import { Gradient } from '@/components/gradient'
 import { useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
 
-import { BackgroundGradient } from './background-gradient'
-
-export function HeroIllustration() {
+function Illustration() {
   const scrollRevealOneRef = useRef<HTMLDivElement[]>([])
   const scrollRevealTwoRef = useRef<HTMLDivElement[]>([])
 
+  const addToScrollRevealOneRef = (el) => {
+    scrollRevealOneRef.current.push(el)
+  }
+
+  const addToScrollRevealTwoRef = (el) => {
+    scrollRevealTwoRef.current.push(el)
+  }
+
   useEffect(() => {
     if (scrollRevealOneRef.current.length > 0) {
-      scrollRevealOneRef.current.map((ref, index) =>
-        ScrollReveal().reveal(scrollRevealOneRef.current[index], {
+      scrollRevealOneRef.current.map((ref) =>
+        ScrollReveal().reveal(ref, {
           delay: 1000,
           duration: 1400,
           distance: '40px',
@@ -22,8 +29,8 @@ export function HeroIllustration() {
     }
 
     if (scrollRevealTwoRef.current.length > 0) {
-      scrollRevealTwoRef.current.map((ref, index) =>
-        ScrollReveal().reveal(scrollRevealTwoRef.current[index], {
+      scrollRevealTwoRef.current.map((ref) =>
+        ScrollReveal().reveal(ref, {
           delay: 400,
           duration: 600,
           distance: '40px',
@@ -39,9 +46,9 @@ export function HeroIllustration() {
 
   return (
     <div>
-      <BackgroundGradient className="absolute inset-0 lg:hidden" />
+      <Gradient className="absolute inset-0 lg:hidden" />
       <div
-        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
+        ref={addToScrollRevealTwoRef}
         className="absolute left-16 top-4 lg:-top-20 lg:left-24"
       >
         <svg
@@ -70,7 +77,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
+        ref={addToScrollRevealTwoRef}
         className="absolute hidden lg:-bottom-28 lg:left-40 lg:block"
       >
         <svg
@@ -100,7 +107,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
+        ref={addToScrollRevealTwoRef}
         className="absolute -top-48 left-96 hidden drop-shadow-2xl lg:block"
       >
         <svg
@@ -135,8 +142,8 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-2 absolute left-16 top-72 drop-shadow-2xl lg:-left-16 lg:top-80"
+        ref={addToScrollRevealOneRef}
       >
         <svg
           width="200"
@@ -170,7 +177,7 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealTwoRef.current.push(el)}
+        ref={addToScrollRevealTwoRef}
         className="hero-illustration-browser drop-shadow-2xl"
       >
         <svg
@@ -431,8 +438,8 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-3 absolute drop-shadow-2xl"
+        ref={addToScrollRevealOneRef}
         style={{ top: '402px', left: '440px' }}
       >
         <svg
@@ -467,8 +474,8 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-4 absolute -top-5 left-44 lg:-top-20 lg:left-72"
+        ref={addToScrollRevealOneRef}
       >
         <svg
           width="40"
@@ -533,8 +540,8 @@ export function HeroIllustration() {
         </svg>
       </div>
       <div
-        ref={(el: HTMLDivElement) => scrollRevealOneRef.current.push(el)}
         className="hero-ball hero-ball-5 absolute lg:-bottom-20 lg:left-80"
+        ref={addToScrollRevealOneRef}
       >
         <svg
           width="24"
@@ -601,3 +608,5 @@ export function HeroIllustration() {
     </div>
   )
 }
+
+export default Illustration

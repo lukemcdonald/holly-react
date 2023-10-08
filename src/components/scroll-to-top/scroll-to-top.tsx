@@ -2,7 +2,7 @@ import type { PropsWithChildren } from 'react'
 import { Fragment, useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-export function ScrollToTop({ children }: PropsWithChildren) {
+function ScrollToTop({ children }: PropsWithChildren) {
   const { pathname } = useLocation()
 
   useLayoutEffect(() => {
@@ -11,3 +11,5 @@ export function ScrollToTop({ children }: PropsWithChildren) {
 
   return <Fragment>{children}</Fragment>
 }
+
+export default ScrollToTop

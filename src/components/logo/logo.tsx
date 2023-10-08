@@ -1,4 +1,4 @@
-export function Logo({ className }: { className?: string }) {
+function Logo({ className }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -41,3 +41,5 @@ export function Logo({ className }: { className?: string }) {
     </svg>
   )
 }
+
+export default Logo

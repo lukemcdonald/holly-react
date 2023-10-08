@@ -1,15 +1,14 @@
+import { NewsletterForm } from '@/components/newsletter-form'
 import type { ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
 
-import { NewsletterForm } from './newsletter-form'
-
 type ScrollRevealRefElement =
+  | HTMLDivElement
   | HTMLHeadingElement
   | HTMLParagraphElement
-  | HTMLDivElement
 
-export function Hero({
+function Hero({
   content,
   illustration,
   title,
@@ -22,8 +21,8 @@ export function Hero({
 
   useEffect(() => {
     if (scrollRevealRef.current.length > 0) {
-      scrollRevealRef.current.map((ref, index) =>
-        ScrollReveal().reveal(scrollRevealRef.current[index], {
+      scrollRevealRef.current.map((ref) =>
+        ScrollReveal().reveal(ref, {
           duration: 1000,
           distance: '40px',
           easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
@@ -44,40 +43,33 @@ export function Hero({
     })
   }
 
+  const addToScrollRevealRef = (el: ScrollRevealRefElement) => {
+    scrollRevealRef.current.push(el)
+  }
+
   return (
     <section className="text-center lg:w-full lg:py-20 lg:text-left">
       <div className="hero mx-auto w-full max-w-6xl px-6">
         <div className="hero-inner relative lg:flex">
-          <div
-            className="hero-copy bg-white pb-16 pt-10 lg:pr-20 lg:pt-16"
-            style={{ minWidth: '600px' }}
-          >
+          <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">
             <div className="mx-auto w-full max-w-3xl">
               <h1
-                ref={(el: ScrollRevealRefElement) =>
-                  scrollRevealRef.current.push(el)
-                }
                 className="mb-4 mt-0 text-4xl font-bold md:text-5xl "
+                ref={addToScrollRevealRef}
               >
                 {title}
               </h1>
               <p
-                ref={(el: ScrollRevealRefElement) =>
-                  scrollRevealRef.current.push(el)
-                }
-                className="prose prose-xl px-16 text-gray-500 md:px-0"
+                className="prose prose-xl m-auto text-gray-500"
+                ref={addToScrollRevealRef}
               >
                 {content}
               </p>
             </div>
 
-            <div
-              ref={(el: ScrollRevealRefElement) =>
-                scrollRevealRef.current.push(el)
-              }
-            >
+            <div ref={addToScrollRevealRef}>
               <NewsletterForm
-                className="m-0 mt-8 max-w-md md:flex"
+                className="mx-auto mt-8 max-w-md lg:mx-0"
                 submitText="Get early access"
                 onSubmit={onNewsletterSubmit}
               />
@@ -85,7 +77,7 @@ export function Hero({
           </div>
 
           {!!illustration && (
-            <div className="relative -ml-6 -mr-6 py-10 lg:p-0">
+            <div className="relative -mx-6 py-10 lg:mx-0 lg:p-0">
               {illustration}
             </div>
           )}
@@ -94,3 +86,5 @@ export function Hero({
     </section>
   )
 }
+
+export default Hero

@@ -1,8 +1,8 @@
-import classnames from 'clsx'
+import clsx from 'clsx'
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
-export function NewsletterForm({
+function NewsletterForm({
   className,
   onSubmit,
   submitText = 'Submit',
@@ -29,7 +29,10 @@ export function NewsletterForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={classnames('newsletter-form is-revealing md:flex', className)}
+      className={clsx(
+        'newsletter-form is-revealing flex flex-col gap-2 sm:flex-row',
+        className,
+      )}
     >
       <div className="mr-2 flex-shrink flex-grow">
         <label className="hidden" htmlFor="email" aria-hidden="true">
@@ -64,3 +67,5 @@ export function NewsletterForm({
     </form>
   )
 }
+
+export default NewsletterForm
