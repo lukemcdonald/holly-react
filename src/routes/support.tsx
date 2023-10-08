@@ -21,10 +21,7 @@ export default function SupportPage() {
 
         <form className="space-y-4">
           <div>
-            <label
-              className="block text-lg font-medium leading-10"
-              htmlFor="name"
-            >
+            <label className="block text-lg font-medium leading-10" htmlFor="name">
               Name
             </label>
             <input
@@ -35,10 +32,7 @@ export default function SupportPage() {
             />
           </div>
           <div>
-            <label
-              className="block text-lg font-medium leading-10"
-              htmlFor="email"
-            >
+            <label className="block text-lg font-medium leading-10" htmlFor="email">
               Email
             </label>
             <input
@@ -49,10 +43,7 @@ export default function SupportPage() {
             />
           </div>
           <div>
-            <label
-              className="block text-lg font-medium leading-10"
-              htmlFor="message"
-            >
+            <label className="block text-lg font-medium leading-10" htmlFor="message">
               Message
             </label>
             <textarea

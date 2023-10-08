@@ -1,8 +1,4 @@
-import {
-  ArticleContent,
-  ArticleImage,
-  ArticleTitle,
-} from '@/components/article'
+import { ArticleContent, ArticleImage, ArticleTitle } from '@/components/article'
 import type { PropsWithChildren } from 'react'
 import invariant from 'tiny-invariant'
 

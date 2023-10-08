@@ -3,10 +3,7 @@ import type { ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
 
-type ScrollRevealRefElement =
-  | HTMLDivElement
-  | HTMLHeadingElement
-  | HTMLParagraphElement
+type ScrollRevealRefElement = HTMLDivElement | HTMLHeadingElement | HTMLParagraphElement
 
 function Hero({
   content,
@@ -53,16 +50,10 @@ function Hero({
         <div className="hero-inner relative lg:flex">
           <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">
             <div className="mx-auto w-full max-w-3xl">
-              <h1
-                className="mb-4 mt-0 text-4xl font-bold md:text-5xl "
-                ref={addToScrollRevealRef}
-              >
+              <h1 className="mb-4 mt-0 text-4xl font-bold md:text-5xl " ref={addToScrollRevealRef}>
                 {title}
               </h1>
-              <p
-                className="prose prose-xl m-auto text-gray-500"
-                ref={addToScrollRevealRef}
-              >
+              <p className="prose prose-xl m-auto text-gray-500" ref={addToScrollRevealRef}>
                 {content}
               </p>
             </div>
@@ -77,9 +68,7 @@ function Hero({
           </div>
 
           {!!illustration && (
-            <div className="relative -mx-6 py-10 lg:mx-0 lg:p-0">
-              {illustration}
-            </div>
+            <div className="relative -mx-6 py-10 lg:mx-0 lg:p-0">{illustration}</div>
           )}
         </div>
       </div>

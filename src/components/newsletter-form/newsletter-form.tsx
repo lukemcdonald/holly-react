@@ -29,10 +29,7 @@ function NewsletterForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={clsx(
-        'newsletter-form is-revealing flex flex-col gap-2 sm:flex-row',
-        className,
-      )}
+      className={clsx('newsletter-form is-revealing flex flex-col gap-2 sm:flex-row', className)}
     >
       <div className="mr-2 flex-shrink flex-grow">
         <label className="hidden" htmlFor="email" aria-hidden="true">
@@ -50,9 +47,7 @@ function NewsletterForm({
           className="w-full rounded-sm border border-gray-300 bg-white px-4 py-3 text-sm text-gray-500 shadow-none"
         />
         {success && (
-          <div className="mt-2 text-xs italic text-gray-500">
-            Email submitted successfully!
-          </div>
+          <div className="mt-2 text-xs italic text-gray-500">Email submitted successfully!</div>
         )}
       </div>
 
