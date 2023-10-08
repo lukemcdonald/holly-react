@@ -1,13 +1,16 @@
-import { ArticleContent, ArticleImage, ArticleTitle } from '@/components/article'
+import { ArticleContent, ArticleImage, ArticleMedia, ArticleTitle } from '@/components/article'
+import { cn } from '@/utils/cn'
 import type { PropsWithChildren } from 'react'
 import invariant from 'tiny-invariant'
 
 function Article({
+  className,
   children,
   imageAlt,
   imageSrc,
   title,
 }: PropsWithChildren<{
+  className?: string
   imageAlt?: string
   imageSrc?: string
   title: string
@@ -17,7 +20,7 @@ function Article({
   }
 
   return (
-    <article className="article text-center lg:w-full lg:py-20 lg:text-left">
+    <article className={cn('article text-center lg:w-full lg:py-20 lg:text-left', className)}>
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="relative lg:flex">
           <ArticleContent>
@@ -28,7 +31,11 @@ function Article({
             {children}
           </ArticleContent>
 
-          {imageSrc && <ArticleImage alt={imageAlt!} src={imageSrc} />}
+          {imageSrc && (
+            <ArticleMedia>
+              <ArticleImage alt={imageAlt!} src={imageSrc} />
+            </ArticleMedia>
+          )}
         </div>
       </div>
     </article>

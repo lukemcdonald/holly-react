@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { cn } from '@/utils/cn'
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
@@ -29,7 +29,7 @@ function NewsletterForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={clsx('newsletter-form is-revealing flex flex-col gap-2 sm:flex-row', className)}
+      className={cn('newsletter-form is-revealing flex flex-col gap-2 sm:flex-row', className)}
     >
       <div className="mr-2 flex-shrink flex-grow">
         <label className="hidden" htmlFor="email" aria-hidden="true">

@@ -1,4 +1,5 @@
 import { NewsletterForm } from '@/components/newsletter-form'
+import { cn } from '@/utils/cn'
 import type { ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
@@ -6,10 +7,12 @@ import ScrollReveal from 'scrollreveal'
 type ScrollRevealRefElement = HTMLDivElement | HTMLHeadingElement | HTMLParagraphElement
 
 function Hero({
+  className,
   content,
   illustration,
   title,
 }: {
+  className?: string
   content: string
   illustration?: ReactNode
   title: string
@@ -45,7 +48,7 @@ function Hero({
   }
 
   return (
-    <section className="text-center lg:w-full lg:py-20 lg:text-left">
+    <section className={cn('text-center lg:w-full lg:py-20 lg:text-left', className)}>
       <div className="hero mx-auto w-full max-w-6xl px-6">
         <div className="hero-inner relative lg:flex">
           <div className="hero-copy pb-16 pt-10 lg:min-w-[40rem] lg:pr-20 lg:pt-16">

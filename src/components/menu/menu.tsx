@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import MenuItem from '@/components/menu/menu-item'
 
 const MENU_ITEMS = [
   { name: 'Contact', to: '/contact' },
@@ -11,16 +11,7 @@ function Menu({ className }: { className?: string }) {
   return (
     <ul className={className}>
       {MENU_ITEMS.map((link) => (
-        <li key={link.name}>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? 'border-b text-white' : 'text-white hover:border-b'
-            }
-            to={link.to}
-          >
-            {link.name}
-          </NavLink>
-        </li>
+        <MenuItem key={link.name} to={link.to} name={link.name} />
       ))}
     </ul>
   )

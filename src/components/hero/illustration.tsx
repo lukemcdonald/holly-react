@@ -2,7 +2,7 @@ import { Gradient } from '@/components/gradient'
 import { useEffect, useRef } from 'react'
 import ScrollReveal from 'scrollreveal'
 
-function Illustration() {
+function Illustration({ className }: { className?: string }) {
   const scrollRevealOneRef = useRef<HTMLDivElement[]>([])
   const scrollRevealTwoRef = useRef<HTMLDivElement[]>([])
 
@@ -45,7 +45,7 @@ function Illustration() {
   }, [])
 
   return (
-    <div>
+    <div className={className}>
       <Gradient className="absolute inset-0 lg:hidden" />
       <div ref={addToScrollRevealTwoRef} className="absolute left-16 top-4 lg:-top-20 lg:left-24">
         <svg width="124" height="64" viewBox="0 0 124 64" xmlns="http://www.w3.org/2000/svg">

@@ -1,26 +1,26 @@
-import ArticleMedia from '@/components/article/media'
+import { cn } from '@/utils/cn'
 
 function Image({
   alt,
+  className,
   height,
   src,
   width,
 }: {
   alt: string
+  className?: string
   height?: number
   src: string
   width?: number
 }) {
   return (
-    <ArticleMedia>
-      <img
-        alt={alt}
-        className="mx-auto lg:aspect-[5/7] lg:w-full"
-        height={width || 640}
-        src={src}
-        width={height || 420}
-      />
-    </ArticleMedia>
+    <img
+      alt={alt}
+      className={cn('mx-auto lg:aspect-[5/7] lg:w-full', className)}
+      height={width || 640}
+      src={src}
+      width={height || 420}
+    />
   )
 }
 
