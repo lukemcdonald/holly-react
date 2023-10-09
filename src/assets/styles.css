@@ -1272,9 +1272,6 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
 .ml-28 {
   margin-left: 7rem;
 }
@@ -1338,9 +1335,6 @@ select {
 .max-w-screen-sm {
   max-width: 640px;
 }
-.flex-none {
-  flex: none;
-}
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1359,9 +1353,6 @@ select {
 .flex-col {
   flex-direction: column;
 }
-.flex-wrap {
-  flex-wrap: wrap;
-}
 .items-center {
   align-items: center;
 }
@@ -1376,6 +1367,9 @@ select {
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-6 {
+  gap: 1.5rem;
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1824,9 +1818,6 @@ select {
     margin-left: 0px;
     margin-right: 0px;
   }
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
   .lg\:block {
     display: block;
   }
@@ -1839,9 +1830,6 @@ select {
   .lg\:aspect-\[5\/7\] {
     aspect-ratio: 5/7;
   }
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
   .lg\:w-full {
     width: 100%;
   }
@@ -1851,11 +1839,11 @@ select {
   .lg\:max-w-none {
     max-width: none;
   }
-  .lg\:justify-start {
-    justify-content: flex-start;
+  .lg\:flex-row {
+    flex-direction: row;
   }
-  .lg\:justify-end {
-    justify-content: flex-end;
+  .lg\:items-end {
+    align-items: flex-end;
   }
   .lg\:justify-between {
     justify-content: space-between;
